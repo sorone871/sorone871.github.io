@@ -114,7 +114,7 @@ html{
 }
 /* Seccion no.2 Sobre mi */
 .sobremi{
-    background-color: rgb(26, 27, 34);
+    background-color: #1a1b22;
     color: #fff;
     padding: 50px 20px;
 }
@@ -214,4 +214,195 @@ html{
 }
 .sobremi button:hover .overlay{
     width: 100%;
+}
+
+/* Seccion Skills */
+.skills{
+    background-color:#252a2e;
+    color: #fff;
+    padding: 50px 20px;
+}
+.skills .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.skills h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.skills .fila{
+    display: flex;
+}
+.skills .fila .columna{
+    width: 50%;
+    padding: 0 20px;
+}
+.skill .fila .columna h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 20px;
+}
+.skills .skill > span{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+.skills .skill .barra-skill{
+    height: 8px;
+    width: 80%;
+    background-color: #131517;
+    position: relative;
+    margin-bottom: 30px;
+}
+.skills .skill .progreso{
+    background-color:#00b5b5 ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+}
+.skills .skill .barra-skill span{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #00b5b5;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+/* Esto se agrega dinamicamente mediante JS */
+.skills .skill .Javascript{
+    width: 0%;
+    animation: 2s Javascript forwards;
+}
+@keyframes Javascript{
+    0%{width:0%;}
+    100%{width: 75%;}
+}
+.skills .skill .htmlcss{
+    width: 0%;
+    animation: 2s htmlcss forwards;
+}
+@keyframes htmlcss{
+    0%{width:0%;}
+    100%{width: 75%;}
+}
+.skills .skill .ejemplo{
+    width: 0%;
+    animation: 2s ejemplo forwards;
+}
+@keyframes ejemplo{
+    0%{width:0%;}
+    100%{width: 75%;}
+}
+/* SEccion Curriculum */
+.curriculum{
+    background-color:#1a1b22;
+    color: #fff;
+    padding: 50px 20px;
+}
+.curriculum .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.curriculum h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.curriculum .fila{
+    display: flex;
+    justify-content: space-between;
+}
+.curriculum .fila .columna{
+    width: 49%;
+    padding: 0 20px;
+}
+.curriculum .fila .columna h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 20px;
+}
+.curriculum .fila .izquierdo{
+    border-right: 2px solid #252a2e;
+}
+.curriculum .fila .derecho{
+    border-left: 2px solid #252a2e;
+}
+.curriculum .fila .item{
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #252a2e;
+    position: relative;
+}
+.curriculum .fila .item h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.curriculum .fila .item .casa{
+    color: #00b5b5;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+.curriculum .fila .item .fecha{
+    display:block;
+    color: #00b5b5;
+    margin-bottom: 15px;
+
+}
+.curriculum .fila .item p{
+    line-height: 24px;
+}
+.curriculum .fila .izq{
+    border-right: 2px solid #00b5b5;
+    margin-right: 20px;
+}
+.curriculum .fila .der{
+    border-left: 2px solid #00b5b5;
+    margin-left: 20px;
+}
+.curriculum .fila .item .conector1{
+    height: 2px;
+    background-color: #00b5b5;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    right: -47px;
+    z-index: 5;
+}
+.curriculum .fila .item .circulo1{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #00b5b5;
+    float: right;
+    position: relative;
+    bottom: 4px;
+}
+.curriculum .fila .item .conector2{
+    height: 2px;
+    background-color: #00b5b5;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    left: -47px;
+    z-index: 5;
+}
+.curriculum .fila .item .circulo2{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #00b5b5;
+    float: left;
+    position: relative;
+    bottom: 4px;
 }
