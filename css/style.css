@@ -11,7 +11,7 @@ html{
 }
 /* MENU */
 .contenedor-header{
-    background: rgb(26, 27, 34);
+    background: #1a1b22;
     /* ***********position fixed : queda fijo*********** */
     position: fixed;
     width: 100%;
@@ -284,7 +284,7 @@ html{
 }
 @keyframes Javascript{
     0%{width:0%;}
-    100%{width: 75%;}
+    100%{width: 56%;}
 }
 .skills .skill .htmlcss{
     width: 0%;
@@ -294,13 +294,53 @@ html{
     0%{width:0%;}
     100%{width: 75%;}
 }
+.skills .skill .php{
+    width: 0%;
+    animation: 2s php forwards;
+}
+@keyframes php{
+    0%{width:0%;}
+    100%{width: 88%;}
+}
 .skills .skill .ejemplo{
     width: 0%;
     animation: 2s ejemplo forwards;
 }
 @keyframes ejemplo{
     0%{width:0%;}
+    100%{width: 48%;}
+}
+.skills .skill .comunicacion{
+    width: 0%;
+    animation: 2s comunicacion forwards;
+}
+@keyframes comunicacion{
+    0%{width:0%;}
+    100%{width: 80%;}
+}
+.skills .skill .trabajoenequipo{
+    width: 0%;
+    animation: 2s trabajoenequipo forwards;
+}
+@keyframes trabajoenequipo{
+    0%{width:0%;}
     100%{width: 75%;}
+}
+.skills .skill .creatividad{
+    width: 0%;
+    animation: 2s creatividad forwards;
+}
+@keyframes creatividad{
+    0%{width:0%;}
+    100%{width: 63%;}
+}
+.skills .skill .dedicacion{
+    width: 0%;
+    animation: 2s dedicacion forwards;
+}
+@keyframes dedicacion{
+    0%{width:0%;}
+    100%{width: 69%;}
 }
 /* SEccion Curriculum */
 .curriculum{
@@ -546,4 +586,113 @@ html{
 }
 .contacto .columna .info ul li i{
     color: #00b5b5;
+}
+/* Contacto Fin */
+
+/* Footer Inicio */
+footer{
+    background-color: #1a1b22;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes{
+    margin-bottom: 20px;
+}
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #00b5b5;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+/* Footer fin */
+
+/* Responsive */
+@media screen and (max-width:900px){
+    nav{
+        display:none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252a2e;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:700px){
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .columna{
+        width: fit-content;
+    }
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .columna{
+        width: 100%;
+    }
+    .skills .fila .columna .barra-skill{
+        width: 100%;
+    }
+    .columna .fila{
+        display: block;
+    }
+    .columna .fila.columna{
+        width: 90%;
+    }
+    .columna .fila .derecho{
+        margin-left: 20px;
+    }
+    .portafolio .galeria{
+        display: block;
+        width: 100%;
+    }
+    .portafolio .galeria .proyecto{
+        max-width: 100%;
+    }
+    .portafolio .galeria .proyecto img{
+        width: 100%;
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .columna{
+        width: 100%;
+    }
 }
