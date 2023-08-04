@@ -672,8 +672,9 @@ footer .arriba{
     }
     .curriculum .fila{
         display: block;
+        /* width: 100%; */
     }
-    .curriculum .fila.columna{
+    .curriculum .fila .columna{
         width: 90%;
     }
     .curriculum .fila .derecho{
