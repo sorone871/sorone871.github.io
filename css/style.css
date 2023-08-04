@@ -670,13 +670,13 @@ footer .arriba{
     .skills .fila .columna .barra-skill{
         width: 100%;
     }
-    .columna .fila{
+    .curriculum .fila{
         display: block;
     }
-    .columna .fila.columna{
+    .curriculum .fila.columna{
         width: 90%;
     }
-    .columna .fila .derecho{
+    .curriculum .fila .derecho{
         margin-left: 20px;
     }
     .portafolio .galeria{
