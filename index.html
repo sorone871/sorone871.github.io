@@ -41,11 +41,11 @@
                 <h1>Jose Luis Reyes Goytia</h1>
                 <h2>Ing sistemas de la informacion</h2>
                 <div class="redes">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-battle-net"></i></a>    
-                    <a href="#"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://www.facebook.com/sorone/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/jose-luis-reyes-goytia-495562232/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/jose.luis.sorone/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://raider.io/characters/us/quelthalas/Sorone" target="_blank"><i class="fa-brands fa-battle-net"></i></a>    
+                    <a href="https://discord.gg/QtASSBp97F" target="_blank"><i class="fa-brands fa-discord"></i></a>
 
                 </div>
             </div>
@@ -71,7 +71,7 @@
                         </li>
                         <li>
                             <strong>Telefono</strong>
-                            +52 871-732-1111
+                            +52 871-145-4439
                         </li>
                         <li>
                             <strong>Email</strong>
@@ -83,32 +83,36 @@
                 <div class="columna">
                     <h3>Intereses</h3>
                     <div class="contenedor-intereses">
-                        <div class="interes">
+                        <div id="interes" class="juegos" onclick="mostrarDiv()">
                             <i class="fa-solid fa-gamepad"></i>
-                            <span>JUEGOS</span>    
+                            <span class="informacion">JUEGOS</span>  
+                            
                         </div>
-                        <div class="interes">
+                        <div id="interes" class="musica" onclick="mostrarDiv()">
                             <i class="fa-solid fa-music"></i>
-                        <span>MUSICA</span>
+                        <span class="informacion">MUSICA</span>
                         </div>
-                        <div class="interes">
+                        <div id="interes" class="arte" onclick="mostrarDiv()">
                             <i class="fa-solid fa-palette"></i>
-                        <span>ARTE</span>
+                        <span class="informacion">ARTE</span>
                         </div>
-                        <div class="interes">
+                        <div id="interes" class="peliculas" onclick="mostrarDiv()">
                             <i class="fa-solid fa-tv"></i>
-                        <span>PELICULAS</span>
+                        <span class="informacion">PELICULAS</span>
                         </div>
                                                 
                     </div>
                 </div>
             </div>
 
-            <button>
-                Descargar CV <i class="fa-solid fa-download"></i>
+            <!-- <button>Descargar CV <i class="fa-solid fa-download"></i>
                 <span class="overlay"></span>
-            </button>
-        </div>
+            </button> -->
+            <a href="./descarga/cv.pdf" download="CV">Descargar CV <i class="fa-solid fa-download"></i>
+                <span class="overlay"></span>
+            </a>
+      
+    </div>
     </section>
     <!-- Seccion 2 Fin -->
     
@@ -145,7 +149,7 @@
                         </div>
                     </div>
                     <div class="skill">
-                        <span>ejemplo</span>
+                        <span>SQL</span>
                         <div class="barra-skill">
                             <div class="progreso">
                                 <span>46%</span>
@@ -287,11 +291,18 @@
             <h2>PORTAFOLIO</h2>
             <div class="galeria">
                 <div class="proyecto">
-                    <img src="./img/workinprogress.jpg" alt="ejemplo1">
-                    <div class="overlay">
-                        <h3>H3 Ejemplo</h3>
-                        <p>ejemplo</p>
-                    </div>
+                    <a href="https://sorone871.github.io/venta-js/">
+                        
+                        <img src="./img/carrito-preview.png" alt="ejemplo1">
+                        <div class="overlay">
+                            <h3>Ventas</h3>
+                            <p>Carrito de compras usando Javascript</p>
+                        </div>
+                    </a>
+                    <!-- <div class="overlay">
+                        <h3>Compras</h3>
+                        <p>Carrito de compras usando Javascript</p>
+                    </div> -->
                 </div>
                 <div class="proyecto">
                     <img src="./img/workinprogress.jpg" alt="ejemplo1">
@@ -351,6 +362,7 @@
                     <button>
                         Enviar Mensaje <i class="fa-solid fa-envelope"></i>
                     </button>
+                    
                     
                 </div>
                 <!-- MAPA -->

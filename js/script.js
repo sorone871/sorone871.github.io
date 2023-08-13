@@ -1,5 +1,45 @@
 let menuVisible = false;
 
+
+const verMas = document.querySelector('#sobremi');//SOBRE ID
+  
+cargarEventos();
+function cargarEventos() {
+    verMas.addEventListener('click', darClick);
+    /*verMas.addEventListener('click', (e) => {
+        divClick()
+    });*/
+}
+
+function mostrarDiv(){
+    console.log();
+}
+function darClick(e) {
+    if (e.target.classList.contains('juegos') 
+    || e.target.classList.contains('musica') 
+    || e.target.classList.contains('arte')
+    || e.target.classList.contains('peliculas')) {
+       
+        const interesSeleccionado=e.target;
+        leerDato(interesSeleccionado);    
+    }else if (e.target.classList.contains('fa-solid')
+    || e.target.classList.contains('informacion')) {
+        const interesSeleccionado2=e.target.parentElement;
+        leerDato(interesSeleccionado2); 
+        
+    }
+        
+    
+}
+function leerDato(interes) {
+    const info={
+        //imagen: interes.querySelector('i').textContent,
+        texto: interes.querySelector('span').textContent,
+       // contenedor: interes.querySelector('div').textContent
+    }
+    console.log(info)
+}
+
 function mostrarOcultarMenu() {
     if (menuVisible) {
         document.getElementById("nav").classList = "";
@@ -34,3 +74,5 @@ function efectoHabilidades() {
 window.onscroll = function() {
     efectoHabilidades();
 }
+
+
