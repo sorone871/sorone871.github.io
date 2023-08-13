@@ -484,6 +484,27 @@ html{
     position: relative;
     bottom: 4px;
 }
+.curriculum .fila .item button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    width: fit-content;
+    display: block;
+    margin: 8px auto;
+    padding: 5px 26px;
+    font-size: 11px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    transition: .8s;
+    text-transform: uppercase;
+}
+.curriculum .fila .item button:hover{
+    background-color: #00b5b5;
+    box-shadow: 0 0 10px #00b5b5, 0 0 40px #00b5b5, 0 0 80px #00b5b5;
+}
 /* Seccion portafolio */
 .portafolio{
     background-color:#252a2e;
