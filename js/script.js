@@ -1,14 +1,13 @@
 let menuVisible = false;
-
-
 const verMas = document.querySelector('#sobremi');//SOBRE ID
+
   
 cargarEventos();
 function cargarEventos() {
     verMas.addEventListener('click', darClick);
     /*verMas.addEventListener('click', (e) => {
         divClick()
-    });*/
+    });*/   
 }
 
 function mostrarDiv(){
@@ -37,6 +36,7 @@ function leerDato(interes) {
         texto: interes.querySelector('span').textContent,
        // contenedor: interes.querySelector('div').textContent
     }
+
     console.log(info)
 }
 

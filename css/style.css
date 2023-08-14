@@ -26,7 +26,7 @@ html{
     text-decoration: none;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 8px 20px;
 }
 .contenedor-header header .logo a{
     font-family: 'Righteous';
@@ -379,6 +379,54 @@ html{
     100%{width: 69%;}
 }
 /* SEccion Curriculum */
+.cutoff-text{
+    --max-line: 2;
+    --line-height: 1.4;
+
+    max-height: calc(var(--max-line) * 1em * var(--line-height));
+    line-height: var (--line-height);
+    overflow: hidden;
+    position: relative;
+}
+.cutoff-text:has(+ .btn-leerMas:not(:checked))::before{
+    content: "";
+    position: absolute;
+    height: calc(1em * var (--line-height));
+    width: 100%;
+    bottom: 0;
+    pointer-events: none;
+}
+.btn-leerMas{
+    appearance: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    width: fit-content;
+    display: block;
+    margin: 8px auto;
+    padding: 5px 26px;
+    font-size: 11px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    transition: .8s;
+    text-transform: uppercase;
+}
+.btn-leerMas:hover{
+    background-color: #00b5b5;
+    box-shadow: 0 0 10px #00b5b5, 0 0 40px #00b5b5, 0 0 80px #00b5b5;
+}
+.btn-leerMas::before{
+    content: "Leer mas";
+}
+.btn-leerMas:checked::before{
+    content: "Menos";
+}
+.cutoff-text:has(+ .btn-leerMas:checked){
+    max-height: none;
+}
 .curriculum{
     background-color:#1a1b22;
     color: #fff;
@@ -437,6 +485,7 @@ html{
 }
 .curriculum .fila .item p{
     line-height: 24px;
+    margin-bottom: 20px;
 }
 .curriculum .fila .izq{
     border-right: 2px solid #00b5b5;
@@ -504,6 +553,9 @@ html{
 .curriculum .fila .item button:hover{
     background-color: #00b5b5;
     box-shadow: 0 0 10px #00b5b5, 0 0 40px #00b5b5, 0 0 80px #00b5b5;
+}
+.curriculum .fila .item button:clicked::before{
+    content: "Ver menos";
 }
 /* Seccion portafolio */
 .portafolio{
