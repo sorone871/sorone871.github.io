@@ -9,6 +9,17 @@ html{
     /* PERMITE DESLIZAR CUANDO HACES CLICK EN EL MENU */
     scroll-behavior: smooth;
 }
+.p{
+
+    background: #ff0000;
+    
+    color: #FFFF;
+    
+    text-align: center;
+
+    padding: 5px;
+    
+    }
 /* MENU */
 .contenedor-header{
     background: #1a1b22;

@@ -1,3 +1,49 @@
+document.addEventListener('DOMContentLoaded', function(){
+    //Seleccionar elemento
+    const inputNombre = document.querySelector('#nombre');
+    const inputTelefono = document.querySelector('#telefono');
+    const inputEmail = document.querySelector('#email');
+    const inputAsunto = document.querySelector('#asunto');
+    const inputMensaje = document.querySelector('#mensaje');
+    const formulario = document.querySelector('#formulario');
+
+    inputNombre.addEventListener('blur', validar);
+    inputTelefono.addEventListener('blur', validar);
+    inputEmail.addEventListener('blur', validar);
+    inputAsunto.addEventListener('blur', validar);
+    inputMensaje.addEventListener('blur', validar);
+    
+    function validar(e){
+        //trim sirve para eliminar espacios en blanco
+        //
+        
+        if (e.target.value.trim()==='') {
+            mostrarAlerta(`El campo ${e.target.id} es obligatorio.`, e.target.parentElement);
+        }else{
+            console.log('esta lleno');
+        }
+    }
+
+    function mostrarAlerta(mensaje, referencia) {
+        //Comprobar si ya existe una alerta
+        const alerta = document.querySelector('.p')
+        if (alerta) {
+            alerta.remove();
+        }
+
+        
+        //Generar alerta en el HTML
+        const error = document.createElement('P');
+        error.textContent = mensaje;
+        error.classList.add('p');
+    
+        //Inyectar el error al formulario
+        referencia.appendChild(error);
+       // formulario.innerHTML.error;
+    }
+});
+
+
 let menuVisible = false;
 const verMas = document.querySelector('#sobremi');//SOBRE ID
 
