@@ -6,30 +6,49 @@ document.addEventListener('DOMContentLoaded', function(){
     const inputAsunto = document.querySelector('#asunto');
     const inputMensaje = document.querySelector('#mensaje');
     const formulario = document.querySelector('#formulario');
+    const btnSubmit = document.querySelector('#formulario button[type="submit"]');
+    const email={
+        nombre: '',
+        telefono: '',
+        email: '',
+        asunto: '',
+        mensaje: ''
+    }
 
-    inputNombre.addEventListener('blur', validar);
-    inputTelefono.addEventListener('blur', validar);
-    inputEmail.addEventListener('blur', validar);
-    inputAsunto.addEventListener('blur', validar);
-    inputMensaje.addEventListener('blur', validar);
+    inputNombre.addEventListener('input', validar);
+    inputTelefono.addEventListener('input', validar);
+    inputEmail.addEventListener('input', validar);
+    inputAsunto.addEventListener('input', validar);
+    inputMensaje.addEventListener('input', validar);
     
     function validar(e){
         //trim sirve para eliminar espacios en blanco
-        //
-        
         if (e.target.value.trim()==='') {
             mostrarAlerta(`El campo ${e.target.id} es obligatorio.`, e.target.parentElement);
-        }else{
-            console.log('esta lleno');
+            email[e.target.name] = '';
+            comprobarFormulario();
+            return;
         }
+
+        //validacion de email 
+        if (e.target.id === 'email' && !validarEmail(e.target.value)) {
+            mostrarAlerta('El email no es valido', e.target.parentElement);
+            email[e.target.name] = '';
+            comprobarFormulario();
+            return;
+        }
+        
+        limpiarAlerta(e.target.parentElement);
+
+        //asignar los valores                       //este todo en minuscula
+        email[e.target.name] = e.target.value.trim().toLowerCase();
+        
+        //comprobar el objeto
+        comprobarFormulario();
     }
 
     function mostrarAlerta(mensaje, referencia) {
-        //Comprobar si ya existe una alerta
-        const alerta = document.querySelector('.p')
-        if (alerta) {
-            alerta.remove();
-        }
+        limpiarAlerta(referencia);
 
         
         //Generar alerta en el HTML
@@ -40,6 +59,35 @@ document.addEventListener('DOMContentLoaded', function(){
         //Inyectar el error al formulario
         referencia.appendChild(error);
        // formulario.innerHTML.error;
+    }
+
+    function limpiarAlerta(referencia){
+        //Comprobar si ya existe una alerta
+
+        const alerta = referencia.querySelector('.p');
+        if (alerta) {
+            alerta.remove();
+        }
+    }
+
+    function validarEmail(email){
+       const regex =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+       const resultado = regex.test(email);
+       //console.log(resultado);
+       return(resultado);
+    }
+
+    function comprobarFormulario(){
+        //console.log(Object.values(email).includes(''));
+        console.log(email)
+        if (Object.values(email).includes('')) {
+            btnSubmit.classList.add('bg-red-600');
+            btnSubmit.disabled=true;
+            return;
+        }
+            btnSubmit.classList.remove('opacity-50');
+            btnSubmit.disabled=false;
+        
     }
 });
 
