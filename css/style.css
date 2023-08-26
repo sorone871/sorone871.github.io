@@ -719,6 +719,9 @@ html{
     /* visibility: hidden; */
     
 }
+textarea{
+    resize: none;
+}
 /* Contacto Fin */
 
 /* Footer Inicio */
