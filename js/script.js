@@ -27,21 +27,22 @@ document.addEventListener('DOMContentLoaded', function(){
     //comprobarEmail();
      
     function enviarEmail(e){
-        e.preventDefault();
+      //  e.preventDefault();
 
         console.log('Cargando....');
         document.getElementById('spinner').style.display = "flex";
 
         setTimeout(() => {
             document.getElementById('spinner').style.display = "none";
-            resetFormulario();
+            //resetFormulario();
            //alerta 
            swal({
             title: 'Exito',
             text: 'Se envio el correo',
             icon: 'success'
-        });
-        }, 4000);
+            });
+        }, 500);
+        //e.preventDefault(false);
     }
 
     function validar(e){
