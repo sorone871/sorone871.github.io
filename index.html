@@ -7,6 +7,8 @@
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/spinner.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Portafolio</title>
 </head>
 <body>
@@ -368,28 +370,38 @@
             <h2>CONTACTO</h2>
             <div class="fila">
                 <!-- Formulario -->
-                <div id="formulario" class="columna">
-                    <div>
-                        <input id="nombre" name="nombre" type="text" placeholder="Tu Nombre" autocomplete="off">
-                    </div>
-                    <div>
-                        <input id="telefono" name="telefono" type="number" placeholder="Tu Telefono" autocomplete="off">
-                    </div>
-                    <div>
-                        <input id="email" name="email" type="email" placeholder="ejemplo@ejemplo.com" autocomplete="off">
-                    </div>
-                    <div>
-                        <input id="asunto" name="asunto" type="text" placeholder="Asunto" autocomplete="off">
-                    </div>
-                    <div>
-                        <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje..." autocomplete="off"></textarea>
-                    </div>
-                    <button type="submit" class="bg-blue opacity-50" disabled>
-                        Enviar Mensaje <i class="fa-solid fa-envelope"></i>
-                    </button>
-                    
-                    
-                </div>
+                    <form action="https://formsubmit.co/joseluis_rgoytia@hotmail.com" method="POST" id="formulario" class="columna">
+                        <div>
+                            <input id="nombre" name="nombre" type="text" placeholder="Tu Nombre" autocomplete="off">
+                        </div>
+                        <div>
+                            <input id="telefono" name="telefono" type="number" placeholder="Tu Telefono" autocomplete="off">
+                        </div>
+                        <div>
+                            <input id="email" name="email" type="email" placeholder="ejemplo@ejemplo.com" autocomplete="off">
+                        </div>
+                        <div>
+                            <input id="asunto" name="asunto" type="text" placeholder="Asunto" autocomplete="off">
+                        </div>
+                        <div>
+                            <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje..." autocomplete="off"></textarea>
+                        </div>
+                        <button disabled id="btnEnviar" type="submit" class="disabled" >
+                            Enviar Mensaje <i class="fa-solid fa-envelope"></i>
+                        </button>
+
+                        <div id="spinner" class="spiner-carga">
+                            <div class="sk-chase">
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                            </div>
+                        </div>
+                    </form>
+                
                 <!-- MAPA -->
                 <div class="columna">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d115176.99161983129!2d-103.44529919999998!3d25.5623168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1691007097375!5m2!1ses-419!2smx" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

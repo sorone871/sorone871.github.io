@@ -5,8 +5,9 @@ document.addEventListener('DOMContentLoaded', function(){
     const inputEmail = document.querySelector('#email');
     const inputAsunto = document.querySelector('#asunto');
     const inputMensaje = document.querySelector('#mensaje');
-    const formulario = document.querySelector('#formulario');
+    let formulario = document.querySelector('#formulario');
     const btnSubmit = document.querySelector('#formulario button[type="submit"]');
+    const spinner = document.querySelector('#spinner');
     const email={
         nombre: '',
         telefono: '',
@@ -20,7 +21,29 @@ document.addEventListener('DOMContentLoaded', function(){
     inputEmail.addEventListener('input', validar);
     inputAsunto.addEventListener('input', validar);
     inputMensaje.addEventListener('input', validar);
-    
+    formulario.addEventListener('submit', enviarEmail);
+
+    //formulario.reset();
+    //comprobarEmail();
+     
+    function enviarEmail(e){
+        e.preventDefault();
+
+        console.log('Cargando....');
+        document.getElementById('spinner').style.display = "flex";
+
+        setTimeout(() => {
+            document.getElementById('spinner').style.display = "none";
+            resetFormulario();
+           //alerta 
+           swal({
+            title: 'Exito',
+            text: 'Se envio el correo',
+            icon: 'success'
+        });
+        }, 4000);
+    }
+
     function validar(e){
         //trim sirve para eliminar espacios en blanco
         if (e.target.value.trim()==='') {
@@ -88,6 +111,18 @@ document.addEventListener('DOMContentLoaded', function(){
             btnSubmit.classList.remove('opacity-50');
             btnSubmit.disabled=false;
         
+    }
+
+    function resetFormulario(){
+         //reiniciar el formulario
+         nombre.nombre = '';
+         telefono.telefono = '';
+         email.email = '';
+         asunto.asunto = '';
+         mensaje.mensaje = '';
+         
+         formulario.reset();
+
     }
 });
 

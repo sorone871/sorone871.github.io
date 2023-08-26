@@ -713,6 +713,12 @@ html{
 .contacto .columna .info ul li i{
     color: #00b5b5;
 }
+.spiner-carga{
+    display: none;
+    justify-content: center;
+    /* visibility: hidden; */
+    
+}
 /* Contacto Fin */
 
 /* Footer Inicio */
