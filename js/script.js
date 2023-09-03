@@ -129,8 +129,12 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 let menuVisible = false;
+let interesesVisible = false;
 const verMas = document.querySelector('#sobremi');//SOBRE ID
-
+const juegos =['league of legends', 'World of Warcraft', 'Halo'];
+const musica =['Rap', 'Reggae', 'Rock', 'Metal'];
+const arte =['Urbano', 'Lettering', 'Pintura', 'Cine'];
+const peliculas =['Ciencia Ficcion', 'Drama', 'Fantasia'];
   
 cargarEventos();
 function cargarEventos() {
@@ -141,7 +145,9 @@ function cargarEventos() {
 }
 
 function mostrarDiv(){
-    console.log();
+    console.log('ola');
+
+   //document.getElementById("juegos-div").style.display = 'flex'
 }
 function darClick(e) {
     if (e.target.classList.contains('juegos') 
@@ -180,9 +186,22 @@ function mostrarOcultarMenu() {
     }
 }
 
+function mostrarOcultarIntereses() {
+    if (interesesVisible) {
+        document.getElementById("juegos-div").classList = "interes-responsive";
+        interesesVisible = false;
+    }else{
+        document.getElementById("juegos-div").classList = "interes-responsive";
+        interesesVisible = true;
+    }
+}
+
 function seleccionar() {
     document.getElementById("nav").classList = "";
     menuVisible = false;
+
+    //document.getElementById("juegos-div").classList = "interes-responsive";
+    //interesesVisible = false;
 }
 //Animacion de habilidades
 function efectoHabilidades() {

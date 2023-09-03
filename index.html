@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/spinner.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <title>Portafolio</title>
+    <title>Sorone</title>
+    <link rel="icon" href="./img/slogo.jpg">
 </head>
 <body>
     <!-- cabecera inicio -->
@@ -90,18 +91,38 @@
                 <div class="columna">
                     <h3>Intereses</h3>
                     <div class="contenedor-intereses">
+                        <div id="juegos-div" class="interes-responsive">
+                            <!-- <ul>
+                                <li>World of Warcraft</li>
+                                <li>League of legends</li>
+                                <li>Halo</li>
+                            </ul> -->
+                        </div>
                         <div id="interes" class="juegos" onclick="mostrarDiv()">
                             <i class="fa-solid fa-gamepad"></i>
                             <span class="informacion">JUEGOS</span>  
-                            
-                        </div>
+                         </div>
+                         <!-- <div id="musica-div" class="interes-responsive">
+                            <ul>
+                                <li>Rap</li>
+                                <li>Reggae</li>
+                                <li>Rock</li>
+                                <li>Metal</li>
+                            </ul>
+                         </div> -->
                         <div id="interes" class="musica" onclick="mostrarDiv()">
                             <i class="fa-solid fa-music"></i>
                         <span class="informacion">MUSICA</span>
                         </div>
+                        <div id="arte-div" class="interes-responsive">
+
+                        </div>
                         <div id="interes" class="arte" onclick="mostrarDiv()">
                             <i class="fa-solid fa-palette"></i>
                         <span class="informacion">ARTE</span>
+                        </div>
+                        <div id="peliculas-div" class="interes-responsive">
+
                         </div>
                         <div id="interes" class="peliculas" onclick="mostrarDiv()">
                             <i class="fa-solid fa-tv"></i>
@@ -308,7 +329,7 @@
             <h2>PORTAFOLIO</h2>
             <div class="galeria">
                 <div class="proyecto">
-                    <a href="https://sorone871.github.io/venta-js/">
+                    <a href="https://soroner.com/carrito-ventas/">
                         
                         <img src="./img/carrito-preview.png" alt="Ventas">
                         <div class="overlay">
@@ -370,31 +391,9 @@
             <h2>CONTACTO</h2>
             <div class="fila">
                 <!-- Formulario -->
-                <!-- https://formsubmit.co/el/furimo -->
-                <!-- http://127.0.0.1:5500/. -->
-                    <!-- <form action="https://formsubmit.co/39ea24c409e3531cebd9a8838553bb9c" method="POST" id="formulario" class="columna">
-                        <div>
-                            <input id="nombre" name="nombre" type="text" placeholder="Tu Nombre" autocomplete="off">
-                        </div>
-                        <div>
-                            <input id="telefono" name="telefono" type="number" placeholder="Tu Telefono" autocomplete="off">
-                        </div>
-                        <div>
-                            <input id="email" name="email" type="email" placeholder="ejemplo@ejemplo.com" autocomplete="off">
-                        </div>
-                        <div>
-                            <input id="asunto" name="asunto" type="text" placeholder="Asunto" autocomplete="off">
-                        </div>
-                        <div>
-                            <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje..." autocomplete="off"></textarea>
-                        </div> -->
-                        <!-- <button disabled id="btnEnviar" type="submit">
-                            Enviar Mensaje <i class="fa-solid fa-envelope"></i>
-                        </button> -->
-                    </form>
                     <form action="https://formsubmit.co/39ea24c409e3531cebd9a8838553bb9c" method="POST" id="formulario" class="columna">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://sorone871.github.io/#contacto">
+                        <input type="hidden" name="_next" value="https://soroner.com/">
                         <div>
                             <input id="nombre" name="nombre" type="text" placeholder="Tu Nombre" autocomplete="off">
                         </div>
