@@ -313,7 +313,7 @@ html{
 }
 .skills .skill .barra-skill{
     height: 8px;
-    width: 80%;
+    width: 100%;
     background-color: #131517;
     position: relative;
     margin-bottom: 30px;
@@ -400,7 +400,7 @@ html{
 }
 @keyframes dedicacion{
     0%{width:0%;}
-    100%{width: 69%;}
+    100%{width: 90%;}
 }
 /* SEccion Curriculum */
 .cutoff-text{
@@ -614,6 +614,7 @@ html{
 }
 .portafolio .galeria .proyecto img{
     width: 100%;
+    max-width: 100%;
     display: block;
 }
  .portafolio .galeria .proyecto .overlay{

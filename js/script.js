@@ -209,14 +209,14 @@ function efectoHabilidades() {
     var distancia_skills = window.innerHeight = skills.getBoundingClientRect().top;
     if (distancia_skills >=300) {
         let habilidades = document.getElementsByClassName("progreso");
-        habilidades[0].classList.add("Javascript");
-        habilidades[1].classList.add("htmlcss");
-        habilidades[2].classList.add("php");
-        habilidades[3].classList.add("ejemplo");
-        habilidades[4].classList.add("comunicacion");
-        habilidades[5].classList.add("trabajoenequipo");
-        habilidades[6].classList.add("creatividad");
-        habilidades[7].classList.add("dedicacion");
+        // habilidades[0].classList.add("Javascript");
+        // habilidades[1].classList.add("htmlcss");
+        // habilidades[2].classList.add("php");
+        // habilidades[3].classList.add("ejemplo");
+        habilidades[0].classList.add("comunicacion");
+        habilidades[1].classList.add("trabajoenequipo");
+        habilidades[2].classList.add("creatividad");
+        habilidades[3].classList.add("dedicacion");
     }     
 }
 //optimisar animacion de habilidades si detecta el scroll
