@@ -9,6 +9,11 @@ html{
     /* PERMITE DESLIZAR CUANDO HACES CLICK EN EL MENU */
     scroll-behavior: smooth;
 }
+img{
+    max-width: 100%;
+    display: block;
+    
+}
 .p{
 
     background: #ff0000;
